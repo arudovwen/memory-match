@@ -5,7 +5,7 @@
 
 body {
     background-image: url(./images/back3.jpeg);
-    background-size: cover;
+    background-size: auto;
     background-position: center center;
     background-repeat: no-repeat;
     color: white;
@@ -149,7 +149,7 @@ button{
         border-radius: 10px;
     }
     button{
-       font-size: 0.5em;
+       font-size: 0.7em;
     }
 
 }
