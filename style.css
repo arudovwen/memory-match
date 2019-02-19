@@ -5,7 +5,7 @@
 
 body {
     background-image: url(./images/back3.jpeg);
-    background-size: auto;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     color: white;
@@ -43,7 +43,7 @@ h1{
   
 }
 .grid{
-    width: 470px;
+    width: 500px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -55,7 +55,7 @@ h1{
 
 
 .card {
-    width: 90px;
+    width: 100px;
     height: 100px;
     margin: 3px;
     background-size: cover;
@@ -117,7 +117,20 @@ button{
     body{
         font-size: 0.5em;
         background-image: url(./images/back4.jpg);
+        display: block;
+        background-size: auto;
     }
+    .container{
+    display:block;
+    justify-content: center;
+    text-align: center
+}
+.info{
+    padding: 10px;
+    max-height:100%;
+    width: 100%;
+    background: black
+} 
     h1{
         text-align: center;
         font-size: 3.3em;
@@ -126,17 +139,21 @@ button{
         
     }
     .board{
-        width: 200px; 
+        width: 100%; 
         padding: 3px;
+        background: transparent;
       
     }
     .grid{
-        width: 200px;
+        width: 300px;
+        background: linear-gradient(to right, rgb(140, 134, 115), rgb(94, 91, 91));
+    
+        
        
     }
     .card{
-        width: 40px;
-        height: 50px;
+        width: 60px;
+        height: 70px;
     }
     .card-face {
      
@@ -157,7 +174,7 @@ button{
         border-radius: 10px;
     }
     button{
-       font-size: 0.7em;
+       font-size: 0.9em;
     }
 
 }
