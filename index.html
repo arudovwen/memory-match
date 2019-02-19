@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="style.css">
+
+  
+   
+</head>
+
+<body>
+    <h1>Naruto Memory Match Game</h1>
+    <br>
+
+    <div class="container">
+        <div class="info">
+            <p><strong>Instructions</strong></p>
+            <p>Pick any two cards and if they match you keep them, and if they dont, they turn back over.
+            </p>
+            <p>The game is over when all cards have been matched.</p>
+            <p><small><i>Hint: try to remember what was on each card and where it was. Goodluck..</i></small></p>
+            <p> Click start to begin ->>></p>
+              
+       <hr>
+       <br>
+           <p id="winner"></p>
+           <p id="time"></p>
+           <p id="move"></p>
+     
+       </div>
+       
+       <div  class="board">
+       
+           <div class="grid" style="border-bottom:2px solid black;padding-bottom:5px;"> 
+                   <button id="start-game" >Start Game</button>
+                   <button id="reset-game">Reset Game</button>
+                   <div id="moves" ></div>
+                   <div id="timer" ></div>
+                    
+                </div>
+           
+               <div id="game"> </div>
+       </div>
+   
+    </div>
+   
+
+    
+
+    
+<script src="script.js"></script>
+</body>
+
+</html>

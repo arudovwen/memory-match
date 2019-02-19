@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./images/back3.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    padding:10px;
+   
+
+}
+h1{
+    text-align: center;
+    font-style: italic;
+    font-size: 4.3em;
+    font-weight: lighter;
+    font-family: 'Beyond Wonderland';
+    
+}
+.container{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+
+ .info{
+    padding: 20px;
+    max-height: 350px;
+    width: 200px;
+    background: black
+} 
+.board{
+    background: linear-gradient(to right, rgb(140, 134, 115), rgb(94, 91, 91));
+    
+     /* margin: 0 140px;  */
+    padding: 3px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    border-radius: 10px;
+  
+}
+.grid{
+    width: 470px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+    perspective: 1000px;  
+}
+
+
+
+.card {
+    width: 90px;
+    height: 100px;
+    margin: 3px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 10px, inset rgba(0,0,0,0.15) 0px -5px 10px;
+    border-radius: 10px;
+    
+    
+
+
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background: red;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.card-back {
+    background: blue;
+    transform: rotateY(180deg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+.match{
+    transform: rotateY(180deg);
+  
+   
+}
+.reset{
+    transform: none;
+}
+button{
+    background: black;
+    color: white;
+    padding: 5px;
+    border-radius: 40px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+#winner{
+    font-family: fantasy;
+    font-size: 2em;
+}
+@media only screen and (max-width:700px){
+    body{
+        font-size: 0.5em;
+    }
+    .board{
+        width: 200px; 
+        padding: 3px;
+      
+    }
+    .grid{
+        width: 200px;
+       
+    }
+    .card{
+        width: 40px;
+        height: 50px;
+    }
+    .card-face {
+     
+        width: 100%;
+        height: 100%;
+      
+    }
+    
+    .card-front {
+      
+        background-size: cover;
+        border-radius: 10px;
+    }
+    
+    .card-back {
+      
+        background-size: cover;
+        border-radius: 10px;
+    }
+    button{
+       font-size: 0.5em;
+    }
+
+}
