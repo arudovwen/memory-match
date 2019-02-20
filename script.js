@@ -55,10 +55,14 @@ let num = 0;
 
 const time = document.getElementById('time');
 const move = document.getElementById('move');
+const timeCount = document.getElementById('timer');
+const winner = document.getElementById('winner');
+const game = document.getElementById('game');
+const resetGame = document.getElementById('reset-game');
 
 
 // setting timer
-const timeCount = document.getElementById('timer');
+
 timeCount.innerHTML = `Timer: ${timer.min} mins ${timer.sec} secs`;
 const startTimer = () => {
 
@@ -77,6 +81,7 @@ const startTimer = () => {
     }, 1000);
 }
 
+// reset game
 function resetTimer() {
     clearInterval(interval);
     timer.sec = 0;
@@ -85,9 +90,11 @@ function resetTimer() {
 
 
 }
+
+// pause game
 function pauseTimer() {
     clearInterval(interval);
-    
+
 }
 
 //number of move list
@@ -105,10 +112,10 @@ const moveList = () => {
 // default number of moves made
 moves.innerHTML = `Your Moves: ${movesCount}`;
 
-const winner = document.getElementById('winner');
+
 
 // reset entire game
-const resetGame = document.getElementById('reset-game');
+
 resetGame.addEventListener('click', () => {
 
     location.reload();
@@ -134,18 +141,11 @@ const reset = () => {
 }
 
 
-// if (startGame.click) {
-//     startTimer();
-// }
-
-
-
-const game = document.getElementById('game')
 const grid = document.createElement('section');
 grid.classList.add('grid', 'board');
 game.appendChild(grid);
 
-// double cards
+// double cards count
 doubleCards = cardsArray.concat(cardsArray)
 // shuffle cards
 doubleCards.sort(() => 0.5 - Math.random());
@@ -159,7 +159,7 @@ doubleCards.forEach(element => {
     cardFront = document.createElement('div');
     cardFront.classList.add('card-face', 'card-front');
     //cardFront.textContent = element.name;
-     cardFront.style.backgroundImage = `url(${element.back})`;
+    cardFront.style.backgroundImage = `url(${element.back})`;
     card.dataset.name = element.name;
     card.appendChild(cardFront);
 
@@ -203,7 +203,7 @@ doubleCards.forEach(element => {
 
                 if (firstGuess !== '' && secondGuess !== '') {
                     moveList();
-                  
+
 
                     if (firstGuess === secondGuess) {
 
@@ -211,17 +211,16 @@ doubleCards.forEach(element => {
                         setTimeout(reset, delay);
 
                         num++;
-                        if(num === 8) {
+                        if (num === 8) {
                             pauseTimer();
-                            winner.innerHTML = "YOU WIN" ;
-                            time.innerHTML =`Your Time is ${timer.min} mins ${timer.sec} secs`
+                            const gameInfo = document.getElementById('game-info');
+                            gameInfo.classList.add('game-info');
+                            winner.innerHTML = "YOU WIN";
+                            time.innerHTML = `Your Time : ${timer.min} mins ${timer.sec} secs`
                             move.innerHTML = `Number of Moves Made : ${movesCount}`;
 
-                            
+
                         }
-
-                        console.log(num);
-
 
 
                     } else {
