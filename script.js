@@ -214,6 +214,7 @@ doubleCards.forEach(element => {
                         if (num === 8) {
                             pauseTimer();
                             const gameInfo = document.getElementById('game-info');
+                            gameInfo.style.backgroundImage = `url(./images/trans-3.png)`;
                             gameInfo.classList.add('game-info');
                             winner.innerHTML = "YOU WIN";
                             time.innerHTML = `Your Time : ${timer.min} mins ${timer.sec} secs`
