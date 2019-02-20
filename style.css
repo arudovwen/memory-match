@@ -50,6 +50,16 @@ p {
     border-radius: 70px;
     box-shadow: rgba(219, 216, 216, 0.8) 0px 5px 15px, inset rgba(226, 223, 223, 0.15) 0px -5px 10px;
 }
+img{
+    width: 250px;
+    height: 250px;
+}
+@media only screen and (max-width:700px) {
+    img{
+        width: 50px;
+        height: 50px;
+    }
+}
 
 .game-info {
     margin-right: 50px;
@@ -152,9 +162,17 @@ p {
 button {
     background: black;
     color: white;
-    padding: 5px 15px;
+    padding: 5px 13px;
+    margin: 5px;
     border-radius: 40px;
     box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+}
+button a{
+    color: white;
+    text-decoration: none;
+    background: -webkit-linear-gradient(#eba52f, #df5c34, #d9bf5f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #winner {
@@ -166,7 +184,7 @@ button {
     body {
         font-size: 0.5em;
         background-image: url(./images/back4.jpg);
-        background-size: cover;
+        background-size: auto;
     }
 
     .container {
@@ -179,7 +197,7 @@ button {
 
     .info {
         padding: 15px;
-        height: 120px;
+        height: 200px;
         width: 250px;
         background: black;
         font-size: 1.3em;
