@@ -119,7 +119,7 @@ button{
         font-size: 0.5em;
         background-image: url(./images/back4.jpg);
         display: block;
-        background-size: cover;
+        background-size: auto;
     }
     .container{
     display:block;
